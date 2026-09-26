@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Me — HJ</title>
+
+    <!-- Elegant fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #f8f3ed;
+            color: #3f3834;
+            font-family: "DM Sans", sans-serif;
+            font-weight: 300;
+        }
+
+        /* ---------- OPENING ---------- */
+
+        .intro {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .small-text {
+            font-size: 13px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #8f8178;
+            margin-bottom: 15px;
+            animation: fadeIn 2s ease;
+        }
+
+        .title {
+            font-family: "Cormorant Garamond", serif;
+            font-size: clamp(70px, 13vw, 150px);
+            font-weight: 500;
+            font-style: italic;
+            line-height: 0.9;
+            color: #342d29;
+            animation: fadeUp 1.5s ease;
+        }
+
+        .arrow {
+            position: absolute;
+            bottom: 55px;
+            text-decoration: none;
+            color: #665950;
+            font-size: 30px;
+            animation: bounce 2s infinite;
+            transition: 0.3s;
+        }
+
+        .arrow:hover {
+            color: #9d8273;
+            transform: scale(1.15);
+        }
+
+        /* ---------- ABOUT ---------- */
+
+        .about {
+            min-height: 100vh;
+            padding: 120px 25px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .content {
+            max-width: 720px;
+            width: 100%;
+        }
+
+        .name {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 62px;
+            font-style: italic;
+            text-align: center;
+            margin-bottom: 55px;
+            color: #3c332e;
+        }
+
+        .poem {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 24px;
+            line-height: 1.65;
+            text-align: left;
+        }
+
+        .poem p {
+            margin-bottom: 30px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: appear 1s ease forwards;
+        }
+
+        .poem p:nth-child(1) { animation-delay: .2s; }
+        .poem p:nth-child(2) { animation-delay: .4s; }
+        .poem p:nth-child(3) { animation-delay: .6s; }
+        .poem p:nth-child(4) { animation-delay: .8s; }
+        .poem p:nth-child(5) { animation-delay: 1s; }
+        .poem p:nth-child(6) { animation-delay: 1.2s; }
+        .poem p:nth-child(7) { animation-delay: 1.4s; }
+
+        .heart {
+            text-align: center;
+            font-size: 22px;
+            margin-top: 60px;
+            letter-spacing: 10px;
+            color: #9b8174;
+        }
+
+        /* ---------- FOOTER ---------- */
+
+        footer {
+            text-align: center;
+            padding: 40px 20px 60px;
+            color: #9a8c83;
+            font-size: 12px;
+            letter-spacing: 2px;
+        }
+
+        /* ---------- ANIMATIONS ---------- */
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(10px);
+            }
+        }
+
+        @keyframes appear {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ---------- PHONE ---------- */
+
+        @media (max-width: 600px) {
+
+            .title {
+                font-size: 75px;
+            }
+
+            .about {
+                padding: 90px 25px;
+            }
+
+            .name {
+                font-size: 50px;
+                margin-bottom: 40px;
+            }
+
+            .poem {
+                font-size: 21px;
+                line-height: 1.65;
+            }
+
+            .arrow {
+                bottom: 35px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- OPENING PAGE -->
+
+    <section class="intro">
+
+        <div class="small-text">
+            a little piece of
+        </div>
+
+        <h1 class="title">
+            About Me
+        </h1>
+
+        <a href="#about" class="arrow">
+            ↓
+        </a>
+
+    </section>
+
+
+    <!-- ABOUT ME -->
+
+    <section class="about" id="about">
+
+        <div class="content">
+
+            <h2 class="name">
+                HJ
+            </h2>
+
+            <div class="poem">
+
+                <p>
+                    hiya! i’m hj.<br>
+                    a girl born on september twenty-eighth,<br>
+                    somewhere between being a little too quiet<br>
+                    and having a thousand thoughts at once.
+                </p>
+
+                <p>
+                    i find comfort in music,<br>
+                    in stories that make me feel something,<br>
+                    in little moments that probably mean more to me<br>
+                    than they should.
+                </p>
+
+                <p>
+                    i love creating things—<br>
+                    putting thoughts into words,<br>
+                    making little edits,<br>
+                    writing things that i’d probably never say out loud.
+                </p>
+
+                <p>
+                    i’m still figuring myself out,<br>
+                    learning to accept the person i am<br>
+                    while slowly becoming the person i want to be.
+                </p>
+
+                <p>
+                    sometimes i overthink.<br>
+                    sometimes i procrastinate.<br>
+                    sometimes i have absolutely no idea what i’m doing.<br>
+                    but i’m learning, and i think that counts for something.
+                </p>
+
+                <p>
+                    i have dreams i haven’t figured out completely yet,<br>
+                    places i want to see,<br>
+                    things i want to try,<br>
+                    and a version of myself i haven’t met yet.
+                </p>
+
+                <p>
+                    so for now,<br>
+                    this is me—<br>
+                    not finished,<br>
+                    not perfect,<br>
+                    just growing,<br>
+                    learning,<br>
+                    and becoming.
+                </p>
+
+            </div>
+
+            <div class="heart">
+                ♡ ♡ ♡
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+        made by hj · september 28
+    </footer>
+
+</body>
+</html>
